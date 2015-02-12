@@ -546,30 +546,6 @@
     var x = y + 5;
     ```
 
-  - End files with a single newline character.
-
-    ```javascript
-    // bad
-    (function(global) {
-        // ...stuff...
-    })(this);
-    ```
-
-    ```javascript
-    // bad
-    (function(global) {
-        // ...stuff...
-    })(this);↵
-    ↵
-    ```
-
-    ```javascript
-    // good
-    (function(global) {
-        // ...stuff...
-    })(this);↵
-    ```
-
   - Use indentation when making long method chains. Use a leading dot, which emphasizes that the line is a method call,
     not a new statement.
 
@@ -1105,7 +1081,7 @@
 ## Events
 
   - When attaching data payloads to events (whether DOM events or something more proprietary like Backbone events), pass
-    a hash instead of a raw value. This allows a subsequent contributor to add more data to the event payload without
+    an object instead of a raw value. This allows a subsequent contributor to add more data to the event payload without
     finding and updating every handler for the event. For example, instead of:
 
     ```js
