@@ -1277,9 +1277,13 @@
 
   - Find Craftsy's JavaScript developers on Freenode at [#denverscript](irc://chat.freenode.net/denverscript).
 
+  - For more information about IRC, check out [this guide](http://botbotme.github.io/irc-guide/).
+
+
 ## Contributors
 
-  - Craftsy's version of this style guide was a joint effort between the members of our Front End guild.
+  - Craftsy's version of this style guide was a joint effort between the members of our Front End guild. Learn more
+    about Craftsy at our [About Us](http://www.craftsy.com/about) page!
 
   - [View Airbnb's Contributors](https://github.com/airbnb/javascript/graphs/contributors)
 
