@@ -93,7 +93,7 @@
     var items = [];
     ```
 
-  - If you don't know array length use Array#push.
+  - If you don't know array length use Array.push().
 
     ```javascript
     var someStack = [];
@@ -106,7 +106,7 @@
     someStack.push('abracadabra');
     ```
 
-  - When you need to copy an array use Array#slice. [jsPerf](http://jsperf.com/converting-arguments-to-an-array/7)
+  - When you need to copy an array use Array.slice(). [jsPerf](http://jsperf.com/converting-arguments-to-an-array/7)
 
     ```javascript
     var len = items.length;
@@ -122,7 +122,7 @@
     itemsCopy = items.slice();
     ```
 
-  - To convert an array-like object to an array, use Array#slice.
+  - To convert an array-like object to an array, use Array.slice().
 
     ```javascript
     function trigger() {
@@ -154,9 +154,6 @@
 
   - Strings longer than 120 characters should be written across multiple lines using string concatenation.
 
-  - Note: If overused, long strings with concatenation could impact performance.
-    [jsPerf](http://jsperf.com/ya-string-concat) & [Discussion](https://github.com/airbnb/javascript/issues/40).
-
     ```javascript
     // bad
     var errorMessage = 'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.';
@@ -178,13 +175,13 @@
   - Function expressions:
 
     ```javascript
-    // anonymous function expression
+    // anonymous function expression (try to avoid these)
     var anonymous = function() {
         return true;
     };
 
-    // named function expression
-    function named() {
+    // named function expression (use these instead for better stack traces)
+    var named = function named() {
         return true;
     };
 
@@ -195,7 +192,7 @@
     ```
 
   - Never declare a function in a non-function block (if, while, etc). Assign the function to a variable instead.
-    Browsers will allow you to do it, but they all interpret it differently, which is bad news bears.
+    Browsers will allow you to do it, but there are performance implications that it is best to avoid.
 
   - **Note:** ECMA-262 defines a `block` as a list of statements. A function declaration is not a statement.
     [Read ECMA-262's note on this issue](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf#page=97).
@@ -946,6 +943,20 @@
             console.log(this);
         }.bind(this);
     }
+    ```
+
+  - Name your functions. This is helpful for stack traces.
+
+    ```javascript
+    // bad
+    var log = function(msg) {
+        console.log(msg);
+    };
+
+    // good
+    var log = function log(msg) {
+        console.log(msg);
+    };
     ```
 
 **[⬆ back to top](#table-of-contents)**
