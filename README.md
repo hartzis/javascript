@@ -1275,7 +1275,7 @@
 
 ## Chat With Us About JavaScript
 
-  - Find Craftsy's JavaScript developers on Freenode at [#denverscript](irc://chat.freenode.net/denverscript).
+  - Find Craftsy's JavaScript developers on Freenode IRC at [#denverscript](irc://chat.freenode.net/denverscript).
 
   - For more information about IRC, check out [this guide](http://botbotme.github.io/irc-guide/).
 
